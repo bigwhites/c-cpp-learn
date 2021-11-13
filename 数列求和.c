@@ -3,10 +3,10 @@ int sum(int number0, int n);
 int main()
 {
 	int p = 0, number0 = 0, n = 0;
-	printf("ÇëÒÀ´ÎÊıÁĞx£¨n£©µÄÊ×ÏîºÍÏîÊıÒÔ¼ÆËãºÍÖµ\n");
-	scanf("%d %d", &number0, &n);  //ÊäÈëÊ×ÏîºÍÏîÊı
+	printf("è¯·ä¾æ¬¡æ•°åˆ—xï¼ˆnï¼‰çš„é¦–é¡¹å’Œé¡¹æ•°ä»¥è®¡ç®—å’Œå€¼\n");
+	scanf("%d %d", &number0, &n);  //è¾“å…¥é¦–é¡¹å’Œé¡¹æ•°
 	p = sum(number0, n);
-	printf("ÊıÁĞx£¨n£©Ç°nÏîºÍsum=%d\n", p);
+	printf("æ•°åˆ—xï¼ˆnï¼‰å‰né¡¹å’Œsum=%d\n", p);
 	return 0;
 }
 
@@ -14,22 +14,22 @@ int sum(int number0, int n)
 {
 	int i, j=number0*10, k,c; 
     int sum = 0;
-    int x[n] = { number0 }; //¶¨ÒåÊıÁĞ 
+    int x[n] = { number0 }; //å®šä¹‰æ•°åˆ— 
   	for(c=1;c<n;c++){
   		x[c]=0;
    } 
   	for (i = 1; i < n; i++) {
 
-		  x[i] = x[i - 1] + j;//¸³ÖµÊıÁĞ 
+		  x[i] = x[i - 1] + j;//èµ‹å€¼æ•°åˆ— 
 		  j=j*10;
 	}
 	for (k = 0; k<n; k++) {
-		sum = sum + x[k];	//ÊıÁĞÇóºÍ 
+		sum = sum + x[k];	//æ•°åˆ—æ±‚å’Œ 
     }
      i=0;
 	for(i=0;i<n;i++){
-	 	printf("x[%d]=%d ",i+1,x[i]);//Êä³ö×ÓÏî 
+	 	printf("x[%d]=%d ",i+1,x[i]);//è¾“å‡ºå­é¡¹ 
 	} 
 	printf("\n"); 
-	return sum;  //·µ»ØºÍÖµ 
+	return sum;  //è¿”å›å’Œå€¼ 
 }
